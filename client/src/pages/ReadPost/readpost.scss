@@ -1,0 +1,19 @@
+.read-post{
+    width: 100vw;
+    min-height: 100vh;
+    background: #000;
+    overflow-y: scroll;
+    padding: 2rem 20%;
+    .post-title{
+        color: #fff;
+        font-size: 3rem;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        font-weight: 600;
+    } 
+    .post-story{
+        color: #fff;
+        line-height: 1.8;
+        font-size: 1rem;
+    }
+}

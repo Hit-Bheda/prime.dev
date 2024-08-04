@@ -1,0 +1,41 @@
+.hero{
+    width: 100%;
+    height: 70vh;
+    background: url('../../assets/richard-horvath-_nWaeTF6qo0-unsplash.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+    .hero-txt{
+        h3{
+            font-size: 3.5rem;
+            color:#fff;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+        .search{
+            width: 20rem;
+            height: 2.4rem;
+            padding: 0 1rem;
+            background: #ffffff20;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                width: 1.5rem;
+            }
+            input{
+                outline: none;
+                background: transparent;
+                width: 85%;
+                height: 60%;
+                border:none;
+                color: #fff;
+            }
+        }
+    }
+}

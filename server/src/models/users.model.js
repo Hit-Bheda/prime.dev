@@ -1,0 +1,35 @@
+import mongoose from "mongoose";
+
+const userSchema = mongoose.Schema({
+  profilePicture:{
+    type:String,
+    default: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+    require:false
+  },
+  name: {
+    require: true,
+    type: String,
+  },
+  username: {
+    require: true,
+    type: String,
+    unique: true,
+  },
+  email: {
+    require: true,
+    type: String,
+    unique: true,
+  },
+  password: {
+    require: true,
+    type: String,
+  },
+  posts: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Post",
+  }]
+},{ timestamps: true });
+
+const User = mongoose.model("User", userSchema);
+
+export default User;

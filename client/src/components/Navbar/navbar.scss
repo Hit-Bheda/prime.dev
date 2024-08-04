@@ -1,0 +1,66 @@
+.navbar{
+    width:100%;
+    height: 3rem;
+    position: fixed;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    // backdrop-filter: blur(2rem);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0,0,0,0) 100%);
+    .left{
+        a{
+            font-size: 1.5rem;
+            font-weight:500;
+            color:#fff;
+            text-decoration: none;
+        }
+    }
+    .right{
+        button{
+            padding: .8rem 1.2rem;
+            display: none;
+        }
+        div{
+            width: 8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .create-btn{
+                display:flex;
+                align-items: center;
+                justify-content: space-between;
+                background: #fff;
+                width: 5rem;
+                height:2rem;
+                border-radius: 4px;
+                padding: 0 .5rem;
+                cursor:pointer;
+                text-decoration: none;
+                color: #000;
+                img{
+                    width: 1rem;
+                }
+                h3{
+                    font-size: .8rem;
+                    font-weight: 500;
+                }
+            }
+            .profile-img{
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                overflow: hidden;
+                cursor: pointer;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    background-color: rebeccapurple;
+                }
+            }
+        }
+    }
+}

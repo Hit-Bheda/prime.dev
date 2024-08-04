@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+}
+
+$blreakpoints: (
+  "xs": 0px,
+  "sm": 480px,
+  "md": 767px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1600px,
+  "xxxl": 1920px,
+);
+
+@mixin xs {
+  @media (max-width: map-get($blreakpoints,"xs")) {
+    @content;
+  }
+}
+@mixin hxs {
+  @media (max-height: map-get($blreakpoints,"xs")) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: map-get($blreakpoints,"sm")) {
+    @content;
+  }
+}
+
+@mixin hsm {
+  @media (max-height: map-get($blreakpoints,"sm")) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: map-get($blreakpoints,"md")) {
+    @content;
+  }
+}
+
+@mixin hmd {
+  @media (max-height: map-get($blreakpoints,"md")) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (max-width: map-get($blreakpoints,"lg")) {
+    @content;
+  }
+}
+
+@mixin hlg {
+  @media (max-height: map-get($blreakpoints,"lg")) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (max-width: map-get($blreakpoints,"xl")) {
+    @content;
+  }
+}
+
+@mixin hxl {
+  @media (max-height: map-get($blreakpoints,"xl")) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (max-width: map-get($blreakpoints,"xxl")) {
+    @content;
+  }
+}
+
+@mixin xxxl {
+  @media (max-width: map-get($blreakpoints,"xxxl")) {
+    @content;
+  }
+}

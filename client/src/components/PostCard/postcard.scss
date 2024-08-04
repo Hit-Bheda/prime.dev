@@ -1,0 +1,39 @@
+.post-card{
+    width: 90%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    .poster{
+        width: 100%;
+        border-radius: 8px;
+    }
+    .post{
+        border-top: 2px solid #fff;
+        margin-top: .8rem;
+        padding-top: .5rem;
+        .date{
+            color: #fff;
+            font-size: .7rem;
+            margin-bottom: .6rem;
+        }
+        .title{
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.5rem;
+            padding-bottom: .4rem;
+        }
+        .descripion{
+            font-size: .8rem;
+            padding-bottom: .7rem;
+        }
+        .btn{
+            padding: .4rem .8rem;
+            font-size: .8rem;
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid #fff;
+            background: transparent;
+            color: #fff;
+        }
+    }
+}

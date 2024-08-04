@@ -1,0 +1,137 @@
+@import "../../styles/base";
+.login,
+.register {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../assets/richard-horvath-_nWaeTF6qo0-unsplash.jpg")
+    no-repeat;
+  background-size: cover;
+  display: flex;
+  .left {
+    width: 50%;
+    height: 100%;
+
+    div {
+      margin: 25% 10%;
+
+      h1 {
+        font-size: 4rem;
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+  }
+  .right {
+    width: 50%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .err{
+      width: 40%;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      background: rgba(251, 62, 62, 0.7);
+      border-radius: 4px;
+      color:#fff;
+      font-size: .9rem;
+    }
+
+    .login-form,
+    .register-form {
+      //background: red;
+      width: 45%;
+      .heading {
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 5vh;
+      }
+      .inputs {
+        .username,
+        .email,
+        .password {
+          .input-box {
+            width: 100%;
+            height: 2.8rem;
+            padding: 0 1rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img {
+              width: 1.5rem;
+              opacity: 0.7;
+            }
+            .line {
+              width: 2px;
+              height: 1rem;
+              background: rgba(255, 255, 255, 0.7);
+            }
+            input {
+              width: 80%;
+              background: transparent;
+              border: none;
+              outline: none;
+              color: #fff;
+              font-size: 0.8rem;
+              height: 100%;
+              line-height: 1;
+            }
+          }
+        }
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.8rem 0.2rem;
+        .remember {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 40%;
+          label {
+            font-size: 0.8rem;
+            color: #fff;
+            opacity: 0.7;
+          }
+        }
+        .forgot {
+          color: #fff;
+          font-size: 0.8rem;
+          opacity: 0.7;
+          //text-decoration: underline;
+          //cursor: pointer;
+        }
+      }
+
+      button {
+        width: 100%;
+        height: 2.8rem;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .actions-2 {
+        p {
+          font-size: 0.8rem;
+          color: #fff;
+          opacity: 0.7;
+          padding: 0.8rem 0.2rem;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
