@@ -4,11 +4,15 @@ import errorHandler from "./middlewares/errorHandler.utils.ts";
 import cors from "cors";
 import userRouter from "./routers/users.router.ts";
 import { Request, Response } from "express";
+import morgan from "npm:morgan";
+import { morganFormate, morganData } from "./loggers/morgan.ts";
 
 const app = express();
 
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
+
+app.use(morgan(morganFormate, morganData));
 
 app.use(express.static("public"));
 app.use("/api", userRouter);
