@@ -9,6 +9,5 @@ const config: configType = {
   secret: cf.SECRET || '',
 };
 
-console.log(config);
 export default config;
 
