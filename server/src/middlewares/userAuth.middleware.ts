@@ -1,8 +1,9 @@
-import config from '../config/config.js'
+import config from '../config/config.ts'
 import jwt from 'jsonwebtoken'
-import User from '../models/users.model.js'
+import User from '../models/users.model.ts'
+import { Request, Response, NextFunction } from "express";
 
-const userAuth = async ( req, res, next) => {
+const userAuth = async ( req: Request, res: Response, next: NextFunction) => {
     if(req.headers){
         const token = req.headers.token
 

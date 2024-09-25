@@ -1,5 +1,5 @@
 import express from "express";
-import userAuth from "../middlewares/userAuth.middleware.js";
+import userAuth from "../middlewares/userAuth.middleware.ts";
 import {
   login,
   register,
@@ -10,8 +10,9 @@ import {
   getProfile,
   updatePost,
   deletePost
-} from "../cotrollers/users.controller.js";
-import tryCatch from "../utils/tryCatch.util.js";
+} from "../cotrollers/users.controller.ts";
+import tryCatch from "../utils/tryCatch.util.ts";
+import { Handler } from "../types/types.ts";
 
 const userRouter = express.Router();
 
@@ -66,7 +67,8 @@ const privateRoutes = [
 ]
 
 publicRoutes.forEach(route => {
-  userRouter[route.method] (route.path,tryCatch(route.handler));
+  const handler = route.handler as Handler;
+  userRouter[route.method] (route.path,tryCatch(handler));
 });
 
 privateRoutes.forEach(route => {

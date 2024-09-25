@@ -1,12 +1,12 @@
-import app from "./app.js";
-import config from "./config/config.js";
-import connnectDB from "./db/db.js";
+import app from "./app.ts";
+import config from "./config/config.ts";
+import connnectDB from "./db/db.ts";
 
 const server = async () => {
     try {
         await connnectDB();
 
-        app.listen(config.port,(err) => {
+        app.listen(config.port,(err: Error) => {
             if(err){
                 console.error("Error While Listning :",err)
             } else{
